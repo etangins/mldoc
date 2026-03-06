@@ -1,0 +1,104 @@
+opam-version: "2.0"
+added: [
+  "doc/menhirGLR" {"D"}
+  "doc/menhirGLR/LICENSE" {"F:S45483T1772777843.35"}
+  "lib/menhirGLR" {"D"}
+  "lib/menhirGLR/GLR.ml" {"F:S37201T1772777843.33"}
+  "lib/menhirGLR/GLR.mli" {"F:S1206T1772777843.33"}
+  "lib/menhirGLR/GLRAPI.ml" {"F:S5943T1772777843.33"}
+  "lib/menhirGLR/GSS.ml" {"F:S5259T1772777843.33"}
+  "lib/menhirGLR/Input.ml" {"F:S6071T1772777843.33"}
+  "lib/menhirGLR/Input.mli" {"F:S2197T1772777843.33"}
+  "lib/menhirGLR/LinearizedArray.ml" {"F:S2322T1772777843.33"}
+  "lib/menhirGLR/LinearizedArray.mli" {"F:S2557T1772777843.33"}
+  "lib/menhirGLR/META" {"F:S183T1772777843.33"}
+  "lib/menhirGLR/MiniBabySet.ml" {"F:S7657T1772777843.34"}
+  "lib/menhirGLR/MiniBabySet.mli" {"F:S2328T1772777843.34"}
+  "lib/menhirGLR/MiniVector.ml" {"F:S7913T1772777843.34"}
+  "lib/menhirGLR/MiniVector.mli" {"F:S2736T1772777843.34"}
+  "lib/menhirGLR/PackedIntArray.ml" {"F:S5883T1772777843.34"}
+  "lib/menhirGLR/PackedIntArray.mli" {"F:S2897T1772777843.34"}
+  "lib/menhirGLR/Path.ml" {"F:S2522T1772777843.34"}
+  "lib/menhirGLR/Path.mli" {"F:S1958T1772777843.34"}
+  "lib/menhirGLR/PriorityQueue.ml" {"F:S3212T1772777843.34"}
+  "lib/menhirGLR/PriorityQueue.mli" {"F:S1845T1772777843.34"}
+  "lib/menhirGLR/RowDisplacementDecode.ml" {"F:S2932T1772777843.34"}
+  "lib/menhirGLR/RowDisplacementDecode.mli" {"F:S2250T1772777843.34"}
+  "lib/menhirGLR/StaticVersion.ml" {"F:S26T1772777843.34"}
+  "lib/menhirGLR/StaticVersion.mli" {"F:S27T1772777843.34"}
+  "lib/menhirGLR/TableFormat.ml" {"F:S5840T1772777843.34"}
+  "lib/menhirGLR/TableInterpreter.ml" {"F:S4207T1772777843.34"}
+  "lib/menhirGLR/TableInterpreter.mli" {"F:S1063T1772777843.34"}
+  "lib/menhirGLR/Tops.ml" {"F:S8036T1772777843.34"}
+  "lib/menhirGLR/Tops.mli" {"F:S3259T1772777843.34"}
+  "lib/menhirGLR/dune-package" {"F:S5552T1772777843.34"}
+  "lib/menhirGLR/menhirGLR.a" {"F:S198224T1772777843.34"}
+  "lib/menhirGLR/menhirGLR.cma" {"F:S302274T1772777843.34"}
+  "lib/menhirGLR/menhirGLR.cmi" {"F:S1567T1772777843.34"}
+  "lib/menhirGLR/menhirGLR.cmt" {"F:S8984T1772777843.34"}
+  "lib/menhirGLR/menhirGLR.cmx" {"F:S475T1772777843.34"}
+  "lib/menhirGLR/menhirGLR.cmxa" {"F:S6668T1772777843.34"}
+  "lib/menhirGLR/menhirGLR.cmxs" {"F:S177888T1772777843.35"}
+  "lib/menhirGLR/menhirGLR.ml" {"F:S1251T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GLR.cmi" {"F:S923T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GLR.cmt" {"F:S229317T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GLR.cmti" {"F:S6890T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GLR.cmx" {"F:S1738T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GLRAPI.cmi" {"F:S2829T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GLRAPI.cmt" {"F:S23710T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GLRAPI.cmx" {"F:S396T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GSS.cmi" {"F:S910T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GSS.cmt" {"F:S12900T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__GSS.cmx" {"F:S250T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__Input.cmi" {"F:S1096T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__Input.cmt" {"F:S26067T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__Input.cmti" {"F:S9838T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__Input.cmx" {"F:S3797T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__LinearizedArray.cmi" {"F:S1433T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__LinearizedArray.cmt" {"F:S29138T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__LinearizedArray.cmti" {"F:S11914T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__LinearizedArray.cmx" {"F:S957T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__MiniBabySet.cmi" {"F:S1919T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__MiniBabySet.cmt" {"F:S82737T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__MiniBabySet.cmti" {"F:S13438T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__MiniBabySet.cmx" {"F:S5930T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__MiniVector.cmi" {"F:S1242T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__MiniVector.cmt" {"F:S56382T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__MiniVector.cmti" {"F:S12021T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__MiniVector.cmx" {"F:S5314T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__PackedIntArray.cmi" {"F:S1171T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__PackedIntArray.cmt" {"F:S46780T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__PackedIntArray.cmti" {"F:S11355T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__PackedIntArray.cmx" {"F:S3270T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__Path.cmi" {"F:S1501T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__Path.cmt" {"F:S15462T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__Path.cmti" {"F:S11321T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__Path.cmx" {"F:S1167T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__PriorityQueue.cmi" {"F:S1901T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__PriorityQueue.cmt" {"F:S29309T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__PriorityQueue.cmti" {"F:S12618T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__PriorityQueue.cmx" {"F:S724T1772777843.34"}
+  "lib/menhirGLR/menhirGLR__RowDisplacementDecode.cmi"
+    {"F:S767T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__RowDisplacementDecode.cmt"
+    {"F:S11019T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__RowDisplacementDecode.cmti"
+    {"F:S8069T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__RowDisplacementDecode.cmx"
+    {"F:S1037T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__StaticVersion.cmi" {"F:S337T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__StaticVersion.cmt" {"F:S2577T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__StaticVersion.cmti" {"F:S2746T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__StaticVersion.cmx" {"F:S220T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__TableFormat.cmi" {"F:S2655T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__TableFormat.cmt" {"F:S22816T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__TableFormat.cmx" {"F:S467T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__TableInterpreter.cmi" {"F:S3128T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__TableInterpreter.cmt" {"F:S35270T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__TableInterpreter.cmti" {"F:S11045T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__TableInterpreter.cmx" {"F:S2121T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__Tops.cmi" {"F:S2299T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__Tops.cmt" {"F:S59564T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__Tops.cmti" {"F:S16972T1772777843.35"}
+  "lib/menhirGLR/menhirGLR__Tops.cmx" {"F:S5626T1772777843.35"}
+]

@@ -1,0 +1,204 @@
+(lang dune 3.15)
+(name menhirGLR)
+(version 20260209)
+(sections (lib .) (libexec .) (doc ../../doc/menhirGLR))
+(files
+ (lib
+  (GLR.ml
+   GLR.mli
+   GLRAPI.ml
+   GSS.ml
+   Input.ml
+   Input.mli
+   LinearizedArray.ml
+   LinearizedArray.mli
+   META
+   MiniBabySet.ml
+   MiniBabySet.mli
+   MiniVector.ml
+   MiniVector.mli
+   PackedIntArray.ml
+   PackedIntArray.mli
+   Path.ml
+   Path.mli
+   PriorityQueue.ml
+   PriorityQueue.mli
+   RowDisplacementDecode.ml
+   RowDisplacementDecode.mli
+   StaticVersion.ml
+   StaticVersion.mli
+   TableFormat.ml
+   TableInterpreter.ml
+   TableInterpreter.mli
+   Tops.ml
+   Tops.mli
+   dune-package
+   menhirGLR.a
+   menhirGLR.cma
+   menhirGLR.cmi
+   menhirGLR.cmt
+   menhirGLR.cmx
+   menhirGLR.cmxa
+   menhirGLR.ml
+   menhirGLR__GLR.cmi
+   menhirGLR__GLR.cmt
+   menhirGLR__GLR.cmti
+   menhirGLR__GLR.cmx
+   menhirGLR__GLRAPI.cmi
+   menhirGLR__GLRAPI.cmt
+   menhirGLR__GLRAPI.cmx
+   menhirGLR__GSS.cmi
+   menhirGLR__GSS.cmt
+   menhirGLR__GSS.cmx
+   menhirGLR__Input.cmi
+   menhirGLR__Input.cmt
+   menhirGLR__Input.cmti
+   menhirGLR__Input.cmx
+   menhirGLR__LinearizedArray.cmi
+   menhirGLR__LinearizedArray.cmt
+   menhirGLR__LinearizedArray.cmti
+   menhirGLR__LinearizedArray.cmx
+   menhirGLR__MiniBabySet.cmi
+   menhirGLR__MiniBabySet.cmt
+   menhirGLR__MiniBabySet.cmti
+   menhirGLR__MiniBabySet.cmx
+   menhirGLR__MiniVector.cmi
+   menhirGLR__MiniVector.cmt
+   menhirGLR__MiniVector.cmti
+   menhirGLR__MiniVector.cmx
+   menhirGLR__PackedIntArray.cmi
+   menhirGLR__PackedIntArray.cmt
+   menhirGLR__PackedIntArray.cmti
+   menhirGLR__PackedIntArray.cmx
+   menhirGLR__Path.cmi
+   menhirGLR__Path.cmt
+   menhirGLR__Path.cmti
+   menhirGLR__Path.cmx
+   menhirGLR__PriorityQueue.cmi
+   menhirGLR__PriorityQueue.cmt
+   menhirGLR__PriorityQueue.cmti
+   menhirGLR__PriorityQueue.cmx
+   menhirGLR__RowDisplacementDecode.cmi
+   menhirGLR__RowDisplacementDecode.cmt
+   menhirGLR__RowDisplacementDecode.cmti
+   menhirGLR__RowDisplacementDecode.cmx
+   menhirGLR__StaticVersion.cmi
+   menhirGLR__StaticVersion.cmt
+   menhirGLR__StaticVersion.cmti
+   menhirGLR__StaticVersion.cmx
+   menhirGLR__TableFormat.cmi
+   menhirGLR__TableFormat.cmt
+   menhirGLR__TableFormat.cmx
+   menhirGLR__TableInterpreter.cmi
+   menhirGLR__TableInterpreter.cmt
+   menhirGLR__TableInterpreter.cmti
+   menhirGLR__TableInterpreter.cmx
+   menhirGLR__Tops.cmi
+   menhirGLR__Tops.cmt
+   menhirGLR__Tops.cmti
+   menhirGLR__Tops.cmx))
+ (libexec (menhirGLR.cmxs))
+ (doc (LICENSE)))
+(library
+ (name menhirGLR)
+ (kind normal)
+ (archives (byte menhirGLR.cma) (native menhirGLR.cmxa))
+ (plugins (byte menhirGLR.cma) (native menhirGLR.cmxs))
+ (native_archives menhirGLR.a)
+ (main_module_name MenhirGLR)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name menhirGLR)
+     (visibility public)
+     (kind alias)
+     (source (path MenhirGLR) (impl (path menhirGLR.ml-gen))))
+    (name MenhirGLR)
+    (modules
+     (module
+      (obj_name menhirGLR__GLR)
+      (visibility public)
+      (source (path GLR) (intf (path GLR.mli)) (impl (path GLR.ml))))
+     (module
+      (obj_name menhirGLR__GLRAPI)
+      (visibility public)
+      (source (path GLRAPI) (impl (path GLRAPI.ml))))
+     (module
+      (obj_name menhirGLR__GSS)
+      (visibility public)
+      (source (path GSS) (impl (path GSS.ml))))
+     (module
+      (obj_name menhirGLR__Input)
+      (visibility public)
+      (source (path Input) (intf (path Input.mli)) (impl (path Input.ml))))
+     (module
+      (obj_name menhirGLR__LinearizedArray)
+      (visibility public)
+      (source
+       (path LinearizedArray)
+       (intf (path LinearizedArray.mli))
+       (impl (path LinearizedArray.ml))))
+     (module
+      (obj_name menhirGLR__MiniBabySet)
+      (visibility public)
+      (source
+       (path MiniBabySet)
+       (intf (path MiniBabySet.mli))
+       (impl (path MiniBabySet.ml))))
+     (module
+      (obj_name menhirGLR__MiniVector)
+      (visibility public)
+      (source
+       (path MiniVector)
+       (intf (path MiniVector.mli))
+       (impl (path MiniVector.ml))))
+     (module
+      (obj_name menhirGLR__PackedIntArray)
+      (visibility public)
+      (source
+       (path PackedIntArray)
+       (intf (path PackedIntArray.mli))
+       (impl (path PackedIntArray.ml))))
+     (module
+      (obj_name menhirGLR__Path)
+      (visibility public)
+      (source (path Path) (intf (path Path.mli)) (impl (path Path.ml))))
+     (module
+      (obj_name menhirGLR__PriorityQueue)
+      (visibility public)
+      (source
+       (path PriorityQueue)
+       (intf (path PriorityQueue.mli))
+       (impl (path PriorityQueue.ml))))
+     (module
+      (obj_name menhirGLR__RowDisplacementDecode)
+      (visibility public)
+      (source
+       (path RowDisplacementDecode)
+       (intf (path RowDisplacementDecode.mli))
+       (impl (path RowDisplacementDecode.ml))))
+     (module
+      (obj_name menhirGLR__StaticVersion)
+      (visibility public)
+      (source
+       (path StaticVersion)
+       (intf (path StaticVersion.mli))
+       (impl (path StaticVersion.ml))))
+     (module
+      (obj_name menhirGLR__TableFormat)
+      (visibility public)
+      (source (path TableFormat) (impl (path TableFormat.ml))))
+     (module
+      (obj_name menhirGLR__TableInterpreter)
+      (visibility public)
+      (source
+       (path TableInterpreter)
+       (intf (path TableInterpreter.mli))
+       (impl (path TableInterpreter.ml))))
+     (module
+      (obj_name menhirGLR__Tops)
+      (visibility public)
+      (source (path Tops) (intf (path Tops.mli)) (impl (path Tops.ml))))))
+   (wrapped true))))

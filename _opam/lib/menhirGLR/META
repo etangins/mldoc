@@ -1,0 +1,7 @@
+version = "20260209"
+description = ""
+requires = ""
+archive(byte) = "menhirGLR.cma"
+archive(native) = "menhirGLR.cmxa"
+plugin(byte) = "menhirGLR.cma"
+plugin(native) = "menhirGLR.cmxs"

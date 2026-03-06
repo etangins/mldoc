@@ -1,0 +1,45 @@
+opam-version: "2.0"
+added: [
+  "doc/js_of_ocaml-ppx" {"D"}
+  "doc/js_of_ocaml-ppx/CHANGES.md" {"F:S36197T1772777880.32"}
+  "doc/js_of_ocaml-ppx/LICENSE" {"F:S27823T1772777880.32"}
+  "doc/js_of_ocaml-ppx/README.md" {"F:S5926T1772777880.32"}
+  "lib/js_of_ocaml-ppx" {"D"}
+  "lib/js_of_ocaml-ppx/META" {"F:S907T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib" {"D"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.a" {"F:S127320T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.cma" {"F:S185097T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.cmi" {"F:S772T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.cmt" {"F:S22233T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.cmti" {"F:S5434T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.cmx" {"F:S15155T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.cmxa" {"F:S8037T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.cmxs" {"F:S150984T1772777880.31"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.ml" {"F:S895T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js.mli" {"F:S1055T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js__.cmi" {"F:S427T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js__.cmt" {"F:S3130T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js__.cmx" {"F:S148T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js__.ml" {"F:S186T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js__Ppx_js_internal.cmi"
+    {"F:S20551T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js__Ppx_js_internal.cmt"
+    {"F:S394244T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js__Ppx_js_internal.cmx"
+    {"F:S16029T1772777880.3"}
+  "lib/js_of_ocaml-ppx/as-lib/ppx_js_internal.ml" {"F:S26464T1772777880.3"}
+  "lib/js_of_ocaml-ppx/dune-package" {"F:S2395T1772777880.3"}
+  "lib/js_of_ocaml-ppx/opam" {"F:S1120T1772777880.3"}
+  "lib/js_of_ocaml-ppx/ppx.exe" {"F:S12926136T1772777880.32"}
+  "lib/js_of_ocaml-ppx/ppx_js" {"F:S12833352T1772777880.31"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.a" {"F:S1992T1772777880.31"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.cma" {"F:S2557T1772777880.31"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.cmi" {"F:S768T1772777880.31"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.cmt" {"F:S4861T1772777880.31"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.cmti" {"F:S5453T1772777880.31"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.cmx" {"F:S3380T1772777880.31"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.cmxa" {"F:S721T1772777880.31"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.cmxs" {"F:S50808T1772777880.32"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.ml" {"F:S846T1772777880.31"}
+  "lib/js_of_ocaml-ppx/ppx_js_rewriter.mli" {"F:S871T1772777880.31"}
+]

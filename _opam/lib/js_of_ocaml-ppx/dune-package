@@ -1,0 +1,89 @@
+(lang dune 3.15)
+(name js_of_ocaml-ppx)
+(version 5.2.0)
+(sections (lib .) (libexec .) (doc ../../doc/js_of_ocaml-ppx))
+(files
+ (lib
+  (META
+   as-lib/ppx_js.a
+   as-lib/ppx_js.cma
+   as-lib/ppx_js.cmi
+   as-lib/ppx_js.cmt
+   as-lib/ppx_js.cmti
+   as-lib/ppx_js.cmx
+   as-lib/ppx_js.cmxa
+   as-lib/ppx_js.ml
+   as-lib/ppx_js.mli
+   as-lib/ppx_js__.cmi
+   as-lib/ppx_js__.cmt
+   as-lib/ppx_js__.cmx
+   as-lib/ppx_js__.ml
+   as-lib/ppx_js__Ppx_js_internal.cmi
+   as-lib/ppx_js__Ppx_js_internal.cmt
+   as-lib/ppx_js__Ppx_js_internal.cmx
+   as-lib/ppx_js_internal.ml
+   dune-package
+   opam
+   ppx_js
+   ppx_js_rewriter.a
+   ppx_js_rewriter.cma
+   ppx_js_rewriter.cmi
+   ppx_js_rewriter.cmt
+   ppx_js_rewriter.cmti
+   ppx_js_rewriter.cmx
+   ppx_js_rewriter.cmxa
+   ppx_js_rewriter.ml
+   ppx_js_rewriter.mli))
+ (libexec (as-lib/ppx_js.cmxs ppx.exe ppx_js_rewriter.cmxs))
+ (doc (CHANGES.md LICENSE README.md)))
+(library
+ (name js_of_ocaml-ppx)
+ (kind ppx_rewriter)
+ (synopsis "Js_of_ocaml ppx")
+ (archives (byte ppx_js_rewriter.cma) (native ppx_js_rewriter.cmxa))
+ (plugins (byte ppx_js_rewriter.cma) (native ppx_js_rewriter.cmxs))
+ (native_archives ppx_js_rewriter.a)
+ (requires js_of_ocaml-ppx.as-lib)
+ (ppx_runtime_deps js_of_ocaml)
+ (main_module_name Ppx_js_rewriter)
+ (modes byte native)
+ (modules
+  (singleton
+   (obj_name ppx_js_rewriter)
+   (visibility public)
+   (source
+    (path Ppx_js_rewriter)
+    (intf (path ppx_js_rewriter.mli))
+    (impl (path ppx_js_rewriter.ml))))))
+(library
+ (name js_of_ocaml-ppx.as-lib)
+ (kind normal)
+ (synopsis "Js_of_ocaml ppx")
+ (archives (byte as-lib/ppx_js.cma) (native as-lib/ppx_js.cmxa))
+ (plugins (byte as-lib/ppx_js.cma) (native as-lib/ppx_js.cmxs))
+ (native_archives as-lib/ppx_js.a)
+ (requires compiler-libs.common ppxlib.ast ppxlib)
+ (main_module_name Ppx_js)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name ppx_js__)
+     (visibility public)
+     (kind alias)
+     (source (path Ppx_js__) (impl (path as-lib/ppx_js__.ml-gen))))
+    (name Ppx_js)
+    (modules
+     (module
+      (obj_name ppx_js)
+      (visibility public)
+      (source
+       (path Ppx_js)
+       (intf (path as-lib/ppx_js.mli))
+       (impl (path as-lib/ppx_js.ml))))
+     (module
+      (obj_name ppx_js__Ppx_js_internal)
+      (visibility public)
+      (source (path Ppx_js_internal) (impl (path as-lib/ppx_js_internal.ml))))))
+   (wrapped true))))

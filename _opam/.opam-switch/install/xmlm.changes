@@ -1,0 +1,25 @@
+opam-version: "2.0"
+added: [
+  "bin/xmltrip" {"F:S1345200T1772777835.15"}
+  "doc/xmlm" {"D"}
+  "doc/xmlm/CHANGES.md" {"F:S2382T1772777835.15"}
+  "doc/xmlm/LICENSE.md" {"F:S738T1772777835.15"}
+  "doc/xmlm/README.md" {"F:S1551T1772777835.15"}
+  "doc/xmlm/examples.ml" {"F:S4105T1772777835.15"}
+  "doc/xmlm/odoc-pages" {"D"}
+  "doc/xmlm/odoc-pages/index.mld" {"F:S240T1772777835.15"}
+  "doc/xmlm/xhtml.ml" {"F:S6763T1772777835.15"}
+  "lib/xmlm" {"D"}
+  "lib/xmlm/META" {"F:S202T1772777835.15"}
+  "lib/xmlm/opam" {"F:S928T1772777835.15"}
+  "lib/xmlm/xmlm.a" {"F:S132592T1772777835.15"}
+  "lib/xmlm/xmlm.cma" {"F:S229715T1772777835.15"}
+  "lib/xmlm/xmlm.cmi" {"F:S16875T1772777835.15"}
+  "lib/xmlm/xmlm.cmt" {"F:S556386T1772777835.15"}
+  "lib/xmlm/xmlm.cmti" {"F:S120609T1772777835.15"}
+  "lib/xmlm/xmlm.cmx" {"F:S11078T1772777835.15"}
+  "lib/xmlm/xmlm.cmxa" {"F:S768T1772777835.15"}
+  "lib/xmlm/xmlm.cmxs" {"F:S154984T1772777835.15"}
+  "lib/xmlm/xmlm.ml" {"F:S43750T1772777835.15"}
+  "lib/xmlm/xmlm.mli" {"F:S30751T1772777835.15"}
+]

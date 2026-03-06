@@ -1,0 +1,242 @@
+opam-version: "2.0"
+added: [
+  "doc/js_of_ocaml" {"D"}
+  "doc/js_of_ocaml/CHANGES.md" {"F:S36197T1772777878.56"}
+  "doc/js_of_ocaml/LICENSE" {"F:S27823T1772777878.56"}
+  "doc/js_of_ocaml/README.md" {"F:S5926T1772777878.56"}
+  "lib/js_of_ocaml" {"D"}
+  "lib/js_of_ocaml/META" {"F:S538T1772777878.51"}
+  "lib/js_of_ocaml/cSS.ml" {"F:S31939T1772777878.51"}
+  "lib/js_of_ocaml/cSS.mli" {"F:S8169T1772777878.51"}
+  "lib/js_of_ocaml/deriving" {"D"}
+  "lib/js_of_ocaml/deriving/deriving_Json.cmi" {"F:S19192T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json.cmt" {"F:S152459T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json.cmti" {"F:S66153T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json.cmx" {"F:S4057T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json.ml" {"F:S9912T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json.mli" {"F:S5727T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_import.cmi"
+    {"F:S17763T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_import.cmt"
+    {"F:S65638T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_import.cmx"
+    {"F:S16599T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_import.ml"
+    {"F:S1923T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_lexer.cmi"
+    {"F:S2438T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_lexer.cmt"
+    {"F:S191990T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_lexer.cmti"
+    {"F:S12470T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_lexer.cmx"
+    {"F:S17059T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_lexer.ml"
+    {"F:S41976T1772777878.51"}
+  "lib/js_of_ocaml/deriving/deriving_Json_lexer.mli"
+    {"F:S2192T1772777878.52"}
+  "lib/js_of_ocaml/deriving/js_of_ocaml_deriving.a"
+    {"F:S119720T1772777878.52"}
+  "lib/js_of_ocaml/deriving/js_of_ocaml_deriving.cma"
+    {"F:S193076T1772777878.52"}
+  "lib/js_of_ocaml/deriving/js_of_ocaml_deriving.cmxa"
+    {"F:S2114T1772777878.52"}
+  "lib/js_of_ocaml/deriving/js_of_ocaml_deriving.cmxs"
+    {"F:S112088T1772777878.56"}
+  "lib/js_of_ocaml/dom.ml" {"F:S11693T1772777878.52"}
+  "lib/js_of_ocaml/dom.mli" {"F:S10472T1772777878.52"}
+  "lib/js_of_ocaml/dom_events.ml" {"F:S1257T1772777878.52"}
+  "lib/js_of_ocaml/dom_events.mli" {"F:S1224T1772777878.52"}
+  "lib/js_of_ocaml/dom_html.ml" {"F:S87622T1772777878.52"}
+  "lib/js_of_ocaml/dom_html.mli" {"F:S73312T1772777878.52"}
+  "lib/js_of_ocaml/dom_svg.ml" {"F:S57254T1772777878.52"}
+  "lib/js_of_ocaml/dom_svg.mli" {"F:S54534T1772777878.52"}
+  "lib/js_of_ocaml/dune-package" {"F:S11976T1772777878.52"}
+  "lib/js_of_ocaml/eventSource.ml" {"F:S2090T1772777878.52"}
+  "lib/js_of_ocaml/eventSource.mli" {"F:S2231T1772777878.52"}
+  "lib/js_of_ocaml/file.ml" {"F:S5888T1772777878.52"}
+  "lib/js_of_ocaml/file.mli" {"F:S4883T1772777878.52"}
+  "lib/js_of_ocaml/firebug.ml" {"F:S3491T1772777878.52"}
+  "lib/js_of_ocaml/firebug.mli" {"F:S3473T1772777878.52"}
+  "lib/js_of_ocaml/form.ml" {"F:S5561T1772777878.52"}
+  "lib/js_of_ocaml/form.mli" {"F:S1890T1772777878.52"}
+  "lib/js_of_ocaml/geolocation.ml" {"F:S2677T1772777878.52"}
+  "lib/js_of_ocaml/geolocation.mli" {"F:S3371T1772777878.52"}
+  "lib/js_of_ocaml/import.ml" {"F:S2074T1772777878.52"}
+  "lib/js_of_ocaml/intersectionObserver.ml" {"F:S1697T1772777878.52"}
+  "lib/js_of_ocaml/intersectionObserver.mli" {"F:S1805T1772777878.52"}
+  "lib/js_of_ocaml/intl.ml" {"F:S12158T1772777878.52"}
+  "lib/js_of_ocaml/intl.mli" {"F:S24177T1772777878.52"}
+  "lib/js_of_ocaml/js.ml" {"F:S21071T1772777878.52"}
+  "lib/js_of_ocaml/js.mli" {"F:S33579T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml.a" {"F:S871072T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml.cma" {"F:S13381792T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml.cmi" {"F:S1939T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml.cmt" {"F:S12006T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml.cmx" {"F:S244T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml.cmxa" {"F:S19905T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml.cmxs" {"F:S648416T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml.ml" {"F:S1612T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml__.cmi" {"F:S3056T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml__.cmt" {"F:S15547T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml__.cmx" {"F:S841T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml__.ml" {"F:S2364T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml__CSS.cmi" {"F:S12492T1772777878.52"}
+  "lib/js_of_ocaml/js_of_ocaml__CSS.cmt" {"F:S328393T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__CSS.cmti" {"F:S47315T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__CSS.cmx" {"F:S1623T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom.cmi" {"F:S93013T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom.cmt" {"F:S625719T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom.cmti" {"F:S345300T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom.cmx" {"F:S2827T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_events.cmi" {"F:S20395T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_events.cmt" {"F:S30945T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_events.cmti" {"F:S56237T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_events.cmx" {"F:S2076T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_html.cmi" {"F:S3324921T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_html.cmt" {"F:S11868993T1772777878.53"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_html.cmti" {"F:S11298062T1772777878.54"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_html.cmx" {"F:S37169T1772777878.54"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_svg.cmi" {"F:S1106101T1772777878.54"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_svg.cmt" {"F:S4302482T1772777878.54"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_svg.cmti" {"F:S4792921T1772777878.54"}
+  "lib/js_of_ocaml/js_of_ocaml__Dom_svg.cmx" {"F:S24528T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__EventSource.cmi" {"F:S6224T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__EventSource.cmt" {"F:S64888T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__EventSource.cmti" {"F:S28961T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__EventSource.cmx" {"F:S1006T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__File.cmi" {"F:S20277T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__File.cmt" {"F:S136593T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__File.cmti" {"F:S101165T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__File.cmx" {"F:S1846T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Firebug.cmi" {"F:S11430T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Firebug.cmt" {"F:S66107T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Firebug.cmti" {"F:S70501T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Firebug.cmx" {"F:S526T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Form.cmi" {"F:S2869T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Form.cmt" {"F:S662316T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Form.cmti" {"F:S14749T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Form.cmx" {"F:S1833T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Geolocation.cmi" {"F:S5201T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Geolocation.cmt" {"F:S39340T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Geolocation.cmti" {"F:S31516T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Geolocation.cmx" {"F:S1019T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Import.cmi" {"F:S17978T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Import.cmt" {"F:S63806T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Import.cmx" {"F:S14808T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__IntersectionObserver.cmi"
+    {"F:S10831T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__IntersectionObserver.cmt"
+    {"F:S61667T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__IntersectionObserver.cmti"
+    {"F:S63838T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__IntersectionObserver.cmx"
+    {"F:S1170T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Intl.cmi" {"F:S30740T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Intl.cmt" {"F:S280392T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Intl.cmti" {"F:S174364T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Intl.cmx" {"F:S1310T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Js.cmi" {"F:S89632T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Js.cmt" {"F:S694965T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Js.cmti" {"F:S404654T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Js.cmx" {"F:S5051T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Json.cmi" {"F:S562T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Json.cmt" {"F:S53478T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Json.cmti" {"F:S4555T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Json.cmx" {"F:S1062T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Jstable.cmi" {"F:S1175T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Jstable.cmt" {"F:S72030T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Jstable.cmti" {"F:S7115T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Jstable.cmx" {"F:S851T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Lib_version.cmi" {"F:S392T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Lib_version.cmt" {"F:S3788T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Lib_version.cmx" {"F:S323T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__MutationObserver.cmi"
+    {"F:S11814T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__MutationObserver.cmt"
+    {"F:S112304T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__MutationObserver.cmti"
+    {"F:S54954T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__MutationObserver.cmx"
+    {"F:S1235T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__PerformanceObserver.cmi"
+    {"F:S3448T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__PerformanceObserver.cmt"
+    {"F:S37239T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__PerformanceObserver.cmti"
+    {"F:S20207T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__PerformanceObserver.cmx"
+    {"F:S1208T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Regexp.cmi" {"F:S2423T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Regexp.cmt" {"F:S164485T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Regexp.cmti" {"F:S14994T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Regexp.cmx" {"F:S1902T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__ResizeObserver.cmi"
+    {"F:S16183T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__ResizeObserver.cmt"
+    {"F:S116677T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__ResizeObserver.cmti"
+    {"F:S84401T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__ResizeObserver.cmx" {"F:S1344T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Sys_js.cmi" {"F:S1477T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Sys_js.cmt" {"F:S22413T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Sys_js.cmti" {"F:S10361T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Sys_js.cmx" {"F:S1364T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Typed_array.cmi" {"F:S22381T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Typed_array.cmt" {"F:S147929T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Typed_array.cmti" {"F:S115586T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Typed_array.cmx" {"F:S2463T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Url.cmi" {"F:S3409T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Url.cmt" {"F:S324269T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Url.cmti" {"F:S20636T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__Url.cmx" {"F:S3155T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__WebGL.cmi" {"F:S102994T1772777878.55"}
+  "lib/js_of_ocaml/js_of_ocaml__WebGL.cmt" {"F:S640242T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__WebGL.cmti" {"F:S642054T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__WebGL.cmx" {"F:S942T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__WebSockets.cmi" {"F:S24391T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__WebSockets.cmt" {"F:S167404T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__WebSockets.cmti" {"F:S103196T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__WebSockets.cmx" {"F:S1186T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__Worker.cmi" {"F:S20656T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__Worker.cmt" {"F:S123641T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__Worker.cmti" {"F:S85333T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__Worker.cmx" {"F:S1064T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__XmlHttpRequest.cmi"
+    {"F:S15592T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__XmlHttpRequest.cmt"
+    {"F:S65597T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__XmlHttpRequest.cmti"
+    {"F:S71667T1772777878.56"}
+  "lib/js_of_ocaml/js_of_ocaml__XmlHttpRequest.cmx" {"F:S973T1772777878.56"}
+  "lib/js_of_ocaml/json.ml" {"F:S2501T1772777878.56"}
+  "lib/js_of_ocaml/json.mli" {"F:S1151T1772777878.56"}
+  "lib/js_of_ocaml/jstable.ml" {"F:S1740T1772777878.56"}
+  "lib/js_of_ocaml/jstable.mli" {"F:S1309T1772777878.56"}
+  "lib/js_of_ocaml/lib_version.ml" {"F:S61T1772777878.56"}
+  "lib/js_of_ocaml/libjs_of_ocaml_stubs.a" {"F:S5264T1772777878.56"}
+  "lib/js_of_ocaml/mutationObserver.ml" {"F:S3795T1772777878.56"}
+  "lib/js_of_ocaml/mutationObserver.mli" {"F:S3634T1772777878.56"}
+  "lib/js_of_ocaml/opam" {"F:S1127T1772777878.56"}
+  "lib/js_of_ocaml/performanceObserver.ml" {"F:S2325T1772777878.56"}
+  "lib/js_of_ocaml/performanceObserver.mli" {"F:S2450T1772777878.56"}
+  "lib/js_of_ocaml/regexp.ml" {"F:S3235T1772777878.56"}
+  "lib/js_of_ocaml/regexp.mli" {"F:S3580T1772777878.56"}
+  "lib/js_of_ocaml/resizeObserver.ml" {"F:S2587T1772777878.56"}
+  "lib/js_of_ocaml/resizeObserver.mli" {"F:S2982T1772777878.56"}
+  "lib/js_of_ocaml/sys_js.ml" {"F:S2302T1772777878.56"}
+  "lib/js_of_ocaml/sys_js.mli" {"F:S3110T1772777878.56"}
+  "lib/js_of_ocaml/typed_array.ml" {"F:S7152T1772777878.56"}
+  "lib/js_of_ocaml/typed_array.mli" {"F:S7634T1772777878.56"}
+  "lib/js_of_ocaml/url.ml" {"F:S9942T1772777878.56"}
+  "lib/js_of_ocaml/url.mli" {"F:S5188T1772777878.56"}
+  "lib/js_of_ocaml/webGL.ml" {"F:S38320T1772777878.56"}
+  "lib/js_of_ocaml/webGL.mli" {"F:S37449T1772777878.56"}
+  "lib/js_of_ocaml/webSockets.ml" {"F:S2807T1772777878.56"}
+  "lib/js_of_ocaml/webSockets.mli" {"F:S2961T1772777878.56"}
+  "lib/js_of_ocaml/worker.ml" {"F:S2372T1772777878.56"}
+  "lib/js_of_ocaml/worker.mli" {"F:S2129T1772777878.56"}
+  "lib/js_of_ocaml/xmlHttpRequest.ml" {"F:S3366T1772777878.56"}
+  "lib/js_of_ocaml/xmlHttpRequest.mli" {"F:S3314T1772777878.56"}
+  "lib/stublibs/dlljs_of_ocaml_stubs.so" {"F:S51080T1772777878.56"}
+]

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+added: [
+  "bin/ocamlbuild" {"F:S2576416T1772777826.23"}
+  "bin/ocamlbuild.byte" {"F:S618700T1772777826.23"}
+  "bin/ocamlbuild.native" {"F:S2576416T1772777826.23"}
+  "doc/ocamlbuild" {"D"}
+  "doc/ocamlbuild/Changes" {"F:S107559T1772777826.25"}
+  "doc/ocamlbuild/LICENSE" {"F:S26378T1772777826.25"}
+  "doc/ocamlbuild/Readme.md" {"F:S1863T1772777826.25"}
+  "lib/ocamlbuild" {"D"}
+  "lib/ocamlbuild/META" {"F:S200T1772777826.23"}
+  "lib/ocamlbuild/ocamlbuild.cmo" {"F:S737T1772777826.24"}
+  "lib/ocamlbuild/ocamlbuild.cmx" {"F:S724T1772777826.25"}
+  "lib/ocamlbuild/ocamlbuild.o" {"F:S1304T1772777826.25"}
+  "lib/ocamlbuild/ocamlbuild_pack.cmi" {"F:S192041T1772777826.24"}
+  "lib/ocamlbuild/ocamlbuild_pack.cmx" {"F:S161700T1772777826.25"}
+  "lib/ocamlbuild/ocamlbuild_plugin.cmi" {"F:S42478T1772777826.24"}
+  "lib/ocamlbuild/ocamlbuild_plugin.cmx" {"F:S50960T1772777826.25"}
+  "lib/ocamlbuild/ocamlbuild_plugin.o" {"F:S6384T1772777826.25"}
+  "lib/ocamlbuild/ocamlbuild_unix_plugin.cmi" {"F:S343T1772777826.24"}
+  "lib/ocamlbuild/ocamlbuild_unix_plugin.cmx" {"F:S251T1772777826.25"}
+  "lib/ocamlbuild/ocamlbuild_unix_plugin.o" {"F:S1320T1772777826.25"}
+  "lib/ocamlbuild/ocamlbuildlib.a" {"F:S1523104T1772777826.25"}
+  "lib/ocamlbuild/ocamlbuildlib.cma" {"F:S405280T1772777826.24"}
+  "lib/ocamlbuild/ocamlbuildlib.cmxa" {"F:S3986T1772777826.24"}
+  "lib/ocamlbuild/opam" {"F:S1003T1772777826.23"}
+  "lib/ocamlbuild/signatures.cmi" {"F:S84083T1772777826.23"}
+  "lib/ocamlbuild/signatures.cmti" {"F:S327387T1772777826.24"}
+  "lib/ocamlbuild/signatures.mli" {"F:S35406T1772777826.23"}
+  "man/man1/ocamlbuild.1" {"F:S7863T1772777826.25"}
+]

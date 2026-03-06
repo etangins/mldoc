@@ -8,7 +8,7 @@ let hashtag_name =
   let hashtag_name_part =
     take_while1 (fun c ->
         non_space_eol c && (not (List.mem c tag_delims)) && c <> '[')
-    <|> page_ref
+    <|> (return () >>= fun () -> Nested_link.match_brackets ())
     (* ignore last consecutive periods *)
     <|> ( take_while (fun c -> List.mem c tag_delims)
           *> (satisfy is_space_eol *> return () <|> end_of_input)

@@ -1,0 +1,1032 @@
+(lang dune 3.15)
+(name js_of_ocaml-compiler)
+(version 5.2.0)
+(sections
+ (lib .)
+ (libexec .)
+ (bin ../../bin)
+ (doc ../../doc/js_of_ocaml-compiler)
+ (stublibs ../stublibs)
+ (man ../../man))
+(files
+ (lib
+  (META
+   annot_lexer.ml
+   annot_lexer.mli
+   annot_parser.ml
+   annot_parser.mli
+   base64.ml
+   base64.mli
+   bigarray.js
+   bigstring.js
+   build_info.ml
+   build_info.mli
+   build_path_prefix_map.ml
+   build_path_prefix_map.mli
+   builtins.ml
+   builtins.mli
+   code.ml
+   code.mli
+   compiler_version.ml
+   compiler_version.mli
+   config.ml
+   config.mli
+   constant.ml
+   deadcode.ml
+   deadcode.mli
+   debug.ml
+   debug.mli
+   dgraph.ml
+   dgraph.mli
+   domain.js
+   driver.ml
+   driver.mli
+   dune-package
+   dynlink.js
+   dynlink/js_of_ocaml_compiler_dynlink.a
+   dynlink/js_of_ocaml_compiler_dynlink.cma
+   dynlink/js_of_ocaml_compiler_dynlink.cmi
+   dynlink/js_of_ocaml_compiler_dynlink.cmt
+   dynlink/js_of_ocaml_compiler_dynlink.cmti
+   dynlink/js_of_ocaml_compiler_dynlink.cmx
+   dynlink/js_of_ocaml_compiler_dynlink.cmxa
+   dynlink/js_of_ocaml_compiler_dynlink.ml
+   dynlink/js_of_ocaml_compiler_dynlink.mli
+   effects.ml
+   effects.mli
+   eval.ml
+   eval.mli
+   findlib-support/jsoo_findlib_support.a
+   findlib-support/jsoo_findlib_support.cma
+   findlib-support/jsoo_findlib_support.cmi
+   findlib-support/jsoo_findlib_support.cmt
+   findlib-support/jsoo_findlib_support.cmti
+   findlib-support/jsoo_findlib_support.cmx
+   findlib-support/jsoo_findlib_support.cmxa
+   findlib-support/jsoo_findlib_support.ml
+   findlib-support/jsoo_findlib_support.mli
+   findlib.ml
+   findlib.mli
+   flow.ml
+   flow.mli
+   flow_lexer.ml
+   flow_lexer.mli
+   freevars.ml
+   freevars.mli
+   fs.js
+   fs.ml
+   fs.mli
+   fs_fake.js
+   fs_node.js
+   gc.js
+   generate.ml
+   generate.mli
+   generate_closure.ml
+   generate_closure.mli
+   global_flow.ml
+   global_flow.mli
+   graphics.js
+   ieee_754.js
+   inline.ml
+   inline.mli
+   instr.ml
+   instr.mli
+   int64.js
+   internalMod.js
+   io.js
+   javascript.ml
+   javascript.mli
+   js_assign.ml
+   js_assign.mli
+   js_of_ocaml_compiler.a
+   js_of_ocaml_compiler.cma
+   js_of_ocaml_compiler.cmi
+   js_of_ocaml_compiler.cmt
+   js_of_ocaml_compiler.cmx
+   js_of_ocaml_compiler.cmxa
+   js_of_ocaml_compiler.ml
+   js_of_ocaml_compiler__Annot_lexer.cmi
+   js_of_ocaml_compiler__Annot_lexer.cmt
+   js_of_ocaml_compiler__Annot_lexer.cmti
+   js_of_ocaml_compiler__Annot_lexer.cmx
+   js_of_ocaml_compiler__Annot_parser.cmi
+   js_of_ocaml_compiler__Annot_parser.cmt
+   js_of_ocaml_compiler__Annot_parser.cmti
+   js_of_ocaml_compiler__Annot_parser.cmx
+   js_of_ocaml_compiler__Base64.cmi
+   js_of_ocaml_compiler__Base64.cmt
+   js_of_ocaml_compiler__Base64.cmti
+   js_of_ocaml_compiler__Base64.cmx
+   js_of_ocaml_compiler__Build_info.cmi
+   js_of_ocaml_compiler__Build_info.cmt
+   js_of_ocaml_compiler__Build_info.cmti
+   js_of_ocaml_compiler__Build_info.cmx
+   js_of_ocaml_compiler__Build_path_prefix_map.cmi
+   js_of_ocaml_compiler__Build_path_prefix_map.cmt
+   js_of_ocaml_compiler__Build_path_prefix_map.cmti
+   js_of_ocaml_compiler__Build_path_prefix_map.cmx
+   js_of_ocaml_compiler__Builtins.cmi
+   js_of_ocaml_compiler__Builtins.cmt
+   js_of_ocaml_compiler__Builtins.cmti
+   js_of_ocaml_compiler__Builtins.cmx
+   js_of_ocaml_compiler__Code.cmi
+   js_of_ocaml_compiler__Code.cmt
+   js_of_ocaml_compiler__Code.cmti
+   js_of_ocaml_compiler__Code.cmx
+   js_of_ocaml_compiler__Compiler_version.cmi
+   js_of_ocaml_compiler__Compiler_version.cmt
+   js_of_ocaml_compiler__Compiler_version.cmti
+   js_of_ocaml_compiler__Compiler_version.cmx
+   js_of_ocaml_compiler__Config.cmi
+   js_of_ocaml_compiler__Config.cmt
+   js_of_ocaml_compiler__Config.cmti
+   js_of_ocaml_compiler__Config.cmx
+   js_of_ocaml_compiler__Constant.cmi
+   js_of_ocaml_compiler__Constant.cmt
+   js_of_ocaml_compiler__Constant.cmx
+   js_of_ocaml_compiler__Deadcode.cmi
+   js_of_ocaml_compiler__Deadcode.cmt
+   js_of_ocaml_compiler__Deadcode.cmti
+   js_of_ocaml_compiler__Deadcode.cmx
+   js_of_ocaml_compiler__Debug.cmi
+   js_of_ocaml_compiler__Debug.cmt
+   js_of_ocaml_compiler__Debug.cmti
+   js_of_ocaml_compiler__Debug.cmx
+   js_of_ocaml_compiler__Dgraph.cmi
+   js_of_ocaml_compiler__Dgraph.cmt
+   js_of_ocaml_compiler__Dgraph.cmti
+   js_of_ocaml_compiler__Dgraph.cmx
+   js_of_ocaml_compiler__Driver.cmi
+   js_of_ocaml_compiler__Driver.cmt
+   js_of_ocaml_compiler__Driver.cmti
+   js_of_ocaml_compiler__Driver.cmx
+   js_of_ocaml_compiler__Effects.cmi
+   js_of_ocaml_compiler__Effects.cmt
+   js_of_ocaml_compiler__Effects.cmti
+   js_of_ocaml_compiler__Effects.cmx
+   js_of_ocaml_compiler__Eval.cmi
+   js_of_ocaml_compiler__Eval.cmt
+   js_of_ocaml_compiler__Eval.cmti
+   js_of_ocaml_compiler__Eval.cmx
+   js_of_ocaml_compiler__Findlib.cmi
+   js_of_ocaml_compiler__Findlib.cmt
+   js_of_ocaml_compiler__Findlib.cmti
+   js_of_ocaml_compiler__Findlib.cmx
+   js_of_ocaml_compiler__Flow.cmi
+   js_of_ocaml_compiler__Flow.cmt
+   js_of_ocaml_compiler__Flow.cmti
+   js_of_ocaml_compiler__Flow.cmx
+   js_of_ocaml_compiler__Flow_lexer.cmi
+   js_of_ocaml_compiler__Flow_lexer.cmt
+   js_of_ocaml_compiler__Flow_lexer.cmti
+   js_of_ocaml_compiler__Flow_lexer.cmx
+   js_of_ocaml_compiler__Freevars.cmi
+   js_of_ocaml_compiler__Freevars.cmt
+   js_of_ocaml_compiler__Freevars.cmti
+   js_of_ocaml_compiler__Freevars.cmx
+   js_of_ocaml_compiler__Fs.cmi
+   js_of_ocaml_compiler__Fs.cmt
+   js_of_ocaml_compiler__Fs.cmti
+   js_of_ocaml_compiler__Fs.cmx
+   js_of_ocaml_compiler__Generate.cmi
+   js_of_ocaml_compiler__Generate.cmt
+   js_of_ocaml_compiler__Generate.cmti
+   js_of_ocaml_compiler__Generate.cmx
+   js_of_ocaml_compiler__Generate_closure.cmi
+   js_of_ocaml_compiler__Generate_closure.cmt
+   js_of_ocaml_compiler__Generate_closure.cmti
+   js_of_ocaml_compiler__Generate_closure.cmx
+   js_of_ocaml_compiler__Global_flow.cmi
+   js_of_ocaml_compiler__Global_flow.cmt
+   js_of_ocaml_compiler__Global_flow.cmti
+   js_of_ocaml_compiler__Global_flow.cmx
+   js_of_ocaml_compiler__Inline.cmi
+   js_of_ocaml_compiler__Inline.cmt
+   js_of_ocaml_compiler__Inline.cmti
+   js_of_ocaml_compiler__Inline.cmx
+   js_of_ocaml_compiler__Instr.cmi
+   js_of_ocaml_compiler__Instr.cmt
+   js_of_ocaml_compiler__Instr.cmti
+   js_of_ocaml_compiler__Instr.cmx
+   js_of_ocaml_compiler__Javascript.cmi
+   js_of_ocaml_compiler__Javascript.cmt
+   js_of_ocaml_compiler__Javascript.cmti
+   js_of_ocaml_compiler__Javascript.cmx
+   js_of_ocaml_compiler__Js_assign.cmi
+   js_of_ocaml_compiler__Js_assign.cmt
+   js_of_ocaml_compiler__Js_assign.cmti
+   js_of_ocaml_compiler__Js_assign.cmx
+   js_of_ocaml_compiler__Js_output.cmi
+   js_of_ocaml_compiler__Js_output.cmt
+   js_of_ocaml_compiler__Js_output.cmti
+   js_of_ocaml_compiler__Js_output.cmx
+   js_of_ocaml_compiler__Js_parser.cmi
+   js_of_ocaml_compiler__Js_parser.cmt
+   js_of_ocaml_compiler__Js_parser.cmti
+   js_of_ocaml_compiler__Js_parser.cmx
+   js_of_ocaml_compiler__Js_simpl.cmi
+   js_of_ocaml_compiler__Js_simpl.cmt
+   js_of_ocaml_compiler__Js_simpl.cmti
+   js_of_ocaml_compiler__Js_simpl.cmx
+   js_of_ocaml_compiler__Js_token.cmi
+   js_of_ocaml_compiler__Js_token.cmt
+   js_of_ocaml_compiler__Js_token.cmti
+   js_of_ocaml_compiler__Js_token.cmx
+   js_of_ocaml_compiler__Js_traverse.cmi
+   js_of_ocaml_compiler__Js_traverse.cmt
+   js_of_ocaml_compiler__Js_traverse.cmti
+   js_of_ocaml_compiler__Js_traverse.cmx
+   js_of_ocaml_compiler__Lambda_lifting.cmi
+   js_of_ocaml_compiler__Lambda_lifting.cmt
+   js_of_ocaml_compiler__Lambda_lifting.cmti
+   js_of_ocaml_compiler__Lambda_lifting.cmx
+   js_of_ocaml_compiler__Link_js.cmi
+   js_of_ocaml_compiler__Link_js.cmt
+   js_of_ocaml_compiler__Link_js.cmti
+   js_of_ocaml_compiler__Link_js.cmx
+   js_of_ocaml_compiler__Linker.cmi
+   js_of_ocaml_compiler__Linker.cmt
+   js_of_ocaml_compiler__Linker.cmti
+   js_of_ocaml_compiler__Linker.cmx
+   js_of_ocaml_compiler__Macro.cmi
+   js_of_ocaml_compiler__Macro.cmt
+   js_of_ocaml_compiler__Macro.cmti
+   js_of_ocaml_compiler__Macro.cmx
+   js_of_ocaml_compiler__Magic_number.cmi
+   js_of_ocaml_compiler__Magic_number.cmt
+   js_of_ocaml_compiler__Magic_number.cmti
+   js_of_ocaml_compiler__Magic_number.cmx
+   js_of_ocaml_compiler__Mlvalue.cmi
+   js_of_ocaml_compiler__Mlvalue.cmt
+   js_of_ocaml_compiler__Mlvalue.cmti
+   js_of_ocaml_compiler__Mlvalue.cmx
+   js_of_ocaml_compiler__Ocaml_compiler.cmi
+   js_of_ocaml_compiler__Ocaml_compiler.cmt
+   js_of_ocaml_compiler__Ocaml_compiler.cmti
+   js_of_ocaml_compiler__Ocaml_compiler.cmx
+   js_of_ocaml_compiler__Ocaml_version.cmi
+   js_of_ocaml_compiler__Ocaml_version.cmt
+   js_of_ocaml_compiler__Ocaml_version.cmti
+   js_of_ocaml_compiler__Ocaml_version.cmx
+   js_of_ocaml_compiler__Parse_bytecode.cmi
+   js_of_ocaml_compiler__Parse_bytecode.cmt
+   js_of_ocaml_compiler__Parse_bytecode.cmti
+   js_of_ocaml_compiler__Parse_bytecode.cmx
+   js_of_ocaml_compiler__Parse_info.cmi
+   js_of_ocaml_compiler__Parse_info.cmt
+   js_of_ocaml_compiler__Parse_info.cmti
+   js_of_ocaml_compiler__Parse_info.cmx
+   js_of_ocaml_compiler__Parse_js.cmi
+   js_of_ocaml_compiler__Parse_js.cmt
+   js_of_ocaml_compiler__Parse_js.cmti
+   js_of_ocaml_compiler__Parse_js.cmx
+   js_of_ocaml_compiler__Partial_cps_analysis.cmi
+   js_of_ocaml_compiler__Partial_cps_analysis.cmt
+   js_of_ocaml_compiler__Partial_cps_analysis.cmti
+   js_of_ocaml_compiler__Partial_cps_analysis.cmx
+   js_of_ocaml_compiler__Phisimpl.cmi
+   js_of_ocaml_compiler__Phisimpl.cmt
+   js_of_ocaml_compiler__Phisimpl.cmti
+   js_of_ocaml_compiler__Phisimpl.cmx
+   js_of_ocaml_compiler__Pretty_print.cmi
+   js_of_ocaml_compiler__Pretty_print.cmt
+   js_of_ocaml_compiler__Pretty_print.cmti
+   js_of_ocaml_compiler__Pretty_print.cmx
+   js_of_ocaml_compiler__Primitive.cmi
+   js_of_ocaml_compiler__Primitive.cmt
+   js_of_ocaml_compiler__Primitive.cmti
+   js_of_ocaml_compiler__Primitive.cmx
+   js_of_ocaml_compiler__Pseudo_fs.cmi
+   js_of_ocaml_compiler__Pseudo_fs.cmt
+   js_of_ocaml_compiler__Pseudo_fs.cmti
+   js_of_ocaml_compiler__Pseudo_fs.cmx
+   js_of_ocaml_compiler__Pure_fun.cmi
+   js_of_ocaml_compiler__Pure_fun.cmt
+   js_of_ocaml_compiler__Pure_fun.cmti
+   js_of_ocaml_compiler__Pure_fun.cmx
+   js_of_ocaml_compiler__Reserved.cmi
+   js_of_ocaml_compiler__Reserved.cmt
+   js_of_ocaml_compiler__Reserved.cmti
+   js_of_ocaml_compiler__Reserved.cmx
+   js_of_ocaml_compiler__Source_map.cmi
+   js_of_ocaml_compiler__Source_map.cmt
+   js_of_ocaml_compiler__Source_map.cmti
+   js_of_ocaml_compiler__Source_map.cmx
+   js_of_ocaml_compiler__Source_map_io.cmi
+   js_of_ocaml_compiler__Source_map_io.cmt
+   js_of_ocaml_compiler__Source_map_io.cmti
+   js_of_ocaml_compiler__Source_map_io.cmx
+   js_of_ocaml_compiler__Specialize.cmi
+   js_of_ocaml_compiler__Specialize.cmt
+   js_of_ocaml_compiler__Specialize.cmti
+   js_of_ocaml_compiler__Specialize.cmx
+   js_of_ocaml_compiler__Specialize_js.cmi
+   js_of_ocaml_compiler__Specialize_js.cmt
+   js_of_ocaml_compiler__Specialize_js.cmti
+   js_of_ocaml_compiler__Specialize_js.cmx
+   js_of_ocaml_compiler__Stdlib.cmi
+   js_of_ocaml_compiler__Stdlib.cmt
+   js_of_ocaml_compiler__Stdlib.cmx
+   js_of_ocaml_compiler__Strongly_connected_components.cmi
+   js_of_ocaml_compiler__Strongly_connected_components.cmt
+   js_of_ocaml_compiler__Strongly_connected_components.cmti
+   js_of_ocaml_compiler__Strongly_connected_components.cmx
+   js_of_ocaml_compiler__Subst.cmi
+   js_of_ocaml_compiler__Subst.cmt
+   js_of_ocaml_compiler__Subst.cmti
+   js_of_ocaml_compiler__Subst.cmx
+   js_of_ocaml_compiler__Tailcall.cmi
+   js_of_ocaml_compiler__Tailcall.cmt
+   js_of_ocaml_compiler__Tailcall.cmti
+   js_of_ocaml_compiler__Tailcall.cmx
+   js_of_ocaml_compiler__Target_env.cmi
+   js_of_ocaml_compiler__Target_env.cmt
+   js_of_ocaml_compiler__Target_env.cmti
+   js_of_ocaml_compiler__Target_env.cmx
+   js_of_ocaml_compiler__Timer.cmi
+   js_of_ocaml_compiler__Timer.cmt
+   js_of_ocaml_compiler__Timer.cmti
+   js_of_ocaml_compiler__Timer.cmx
+   js_of_ocaml_compiler__Unit_info.cmi
+   js_of_ocaml_compiler__Unit_info.cmt
+   js_of_ocaml_compiler__Unit_info.cmti
+   js_of_ocaml_compiler__Unit_info.cmx
+   js_of_ocaml_compiler__Var_printer.cmi
+   js_of_ocaml_compiler__Var_printer.cmt
+   js_of_ocaml_compiler__Var_printer.cmti
+   js_of_ocaml_compiler__Var_printer.cmx
+   js_of_ocaml_compiler__Vlq64.cmi
+   js_of_ocaml_compiler__Vlq64.cmt
+   js_of_ocaml_compiler__Vlq64.cmti
+   js_of_ocaml_compiler__Vlq64.cmx
+   js_output.ml
+   js_output.mli
+   js_parser.ml
+   js_parser.mli
+   js_simpl.ml
+   js_simpl.mli
+   js_token.ml
+   js_token.mli
+   js_traverse.ml
+   js_traverse.mli
+   jslib.js
+   jslib_js_of_ocaml.js
+   lambda_lifting.ml
+   lambda_lifting.mli
+   lexing.js
+   link_js.ml
+   link_js.mli
+   linker.ml
+   linker.mli
+   macro.ml
+   macro.mli
+   magic_number.ml
+   magic_number.mli
+   marshal.js
+   md5.js
+   mlBytes.js
+   mlvalue.ml
+   mlvalue.mli
+   nat.js
+   ocaml_compiler.ml
+   ocaml_compiler.mli
+   ocaml_version.ml
+   ocaml_version.mli
+   opam
+   parse_bytecode.ml
+   parse_bytecode.mli
+   parse_info.ml
+   parse_info.mli
+   parse_js.ml
+   parse_js.mli
+   parsing.js
+   partial_cps_analysis.ml
+   partial_cps_analysis.mli
+   phisimpl.ml
+   phisimpl.mli
+   pretty_print.ml
+   pretty_print.mli
+   primitive.ml
+   primitive.mli
+   prng.js
+   pseudo_fs.ml
+   pseudo_fs.mli
+   pure_fun.ml
+   pure_fun.mli
+   reserved.ml
+   reserved.mli
+   runtime-files/files.ml
+   runtime-files/js_of_ocaml_compiler_runtime_files.a
+   runtime-files/js_of_ocaml_compiler_runtime_files.cma
+   runtime-files/js_of_ocaml_compiler_runtime_files.cmi
+   runtime-files/js_of_ocaml_compiler_runtime_files.cmt
+   runtime-files/js_of_ocaml_compiler_runtime_files.cmx
+   runtime-files/js_of_ocaml_compiler_runtime_files.cmxa
+   runtime-files/js_of_ocaml_compiler_runtime_files.ml
+   runtime-files/js_of_ocaml_compiler_runtime_files__.cmi
+   runtime-files/js_of_ocaml_compiler_runtime_files__.cmt
+   runtime-files/js_of_ocaml_compiler_runtime_files__.cmx
+   runtime-files/js_of_ocaml_compiler_runtime_files__.ml
+   runtime-files/js_of_ocaml_compiler_runtime_files__Files.cmi
+   runtime-files/js_of_ocaml_compiler_runtime_files__Files.cmt
+   runtime-files/js_of_ocaml_compiler_runtime_files__Files.cmx
+   runtime.js
+   runtime/jsoo_runtime.a
+   runtime/jsoo_runtime.cma
+   runtime/jsoo_runtime.cmi
+   runtime/jsoo_runtime.cmt
+   runtime/jsoo_runtime.cmx
+   runtime/jsoo_runtime.cmxa
+   runtime/jsoo_runtime.ml
+   runtime/jsoo_runtime__.cmi
+   runtime/jsoo_runtime__.cmt
+   runtime/jsoo_runtime__.cmx
+   runtime/jsoo_runtime__.ml
+   runtime/jsoo_runtime__Runtime_version.cmi
+   runtime/jsoo_runtime__Runtime_version.cmt
+   runtime/jsoo_runtime__Runtime_version.cmx
+   runtime/libjsoo_runtime_stubs.a
+   runtime/runtime_version.ml
+   runtime_events.js
+   source_map.ml
+   source_map.mli
+   source_map_io.ml
+   source_map_io.mli
+   specialize.ml
+   specialize.mli
+   specialize_js.ml
+   specialize_js.mli
+   stdlib.js
+   stdlib.ml
+   strongly_connected_components.ml
+   strongly_connected_components.mli
+   subst.ml
+   subst.mli
+   sync.js
+   tailcall.ml
+   tailcall.mli
+   target_env.ml
+   target_env.mli
+   timer.ml
+   timer.mli
+   toplevel.js
+   unit_info.ml
+   unit_info.mli
+   unix.js
+   var_printer.ml
+   var_printer.mli
+   vlq64.ml
+   vlq64.mli
+   weak.js))
+ (libexec
+  (dynlink/js_of_ocaml_compiler_dynlink.cmxs
+   findlib-support/jsoo_findlib_support.cmxs
+   js_of_ocaml_compiler.cmxs
+   runtime-files/js_of_ocaml_compiler_runtime_files.cmxs
+   runtime/jsoo_runtime.cmxs))
+ (bin (js_of_ocaml jsoo_minify))
+ (doc (CHANGES.md LICENSE README.md))
+ (stublibs (dlljsoo_runtime_stubs.so))
+ (man
+  (man1/js_of_ocaml-build-fs.1
+   man1/js_of_ocaml-build-runtime.1
+   man1/js_of_ocaml-link.1
+   man1/js_of_ocaml.1
+   man1/jsoo_minify.1)))
+(library
+ (name js_of_ocaml-compiler)
+ (kind normal)
+ (synopsis "Js_of_ocaml compiler library")
+ (archives (byte js_of_ocaml_compiler.cma) (native js_of_ocaml_compiler.cmxa))
+ (plugins (byte js_of_ocaml_compiler.cma) (native js_of_ocaml_compiler.cmxs))
+ (native_archives js_of_ocaml_compiler.a)
+ (requires
+  compiler-libs.common
+  compiler-libs.bytecomp
+  menhirLib
+  sedlex
+  yojson)
+ (main_module_name Js_of_ocaml_compiler)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name js_of_ocaml_compiler)
+     (visibility public)
+     (kind alias)
+     (source
+      (path Js_of_ocaml_compiler)
+      (impl (path js_of_ocaml_compiler.ml-gen))))
+    (name Js_of_ocaml_compiler)
+    (modules
+     (module
+      (obj_name js_of_ocaml_compiler__Annot_lexer)
+      (visibility public)
+      (source
+       (path Annot_lexer)
+       (intf (path annot_lexer.mli))
+       (impl (path annot_lexer.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Annot_parser)
+      (visibility public)
+      (source
+       (path Annot_parser)
+       (intf (path annot_parser.mli))
+       (impl (path annot_parser.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Base64)
+      (visibility public)
+      (source (path Base64) (intf (path base64.mli)) (impl (path base64.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Build_info)
+      (visibility public)
+      (source
+       (path Build_info)
+       (intf (path build_info.mli))
+       (impl (path build_info.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Build_path_prefix_map)
+      (visibility public)
+      (source
+       (path Build_path_prefix_map)
+       (intf (path build_path_prefix_map.mli))
+       (impl (path build_path_prefix_map.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Builtins)
+      (visibility public)
+      (source
+       (path Builtins)
+       (intf (path builtins.mli))
+       (impl (path builtins.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Code)
+      (visibility public)
+      (source (path Code) (intf (path code.mli)) (impl (path code.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Compiler_version)
+      (visibility public)
+      (source
+       (path Compiler_version)
+       (intf (path compiler_version.mli))
+       (impl (path compiler_version.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Config)
+      (visibility public)
+      (source (path Config) (intf (path config.mli)) (impl (path config.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Constant)
+      (visibility public)
+      (source (path Constant) (impl (path constant.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Deadcode)
+      (visibility public)
+      (source
+       (path Deadcode)
+       (intf (path deadcode.mli))
+       (impl (path deadcode.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Debug)
+      (visibility public)
+      (source (path Debug) (intf (path debug.mli)) (impl (path debug.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Dgraph)
+      (visibility public)
+      (source (path Dgraph) (intf (path dgraph.mli)) (impl (path dgraph.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Driver)
+      (visibility public)
+      (source (path Driver) (intf (path driver.mli)) (impl (path driver.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Effects)
+      (visibility public)
+      (source
+       (path Effects)
+       (intf (path effects.mli))
+       (impl (path effects.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Eval)
+      (visibility public)
+      (source (path Eval) (intf (path eval.mli)) (impl (path eval.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Findlib)
+      (visibility public)
+      (source
+       (path Findlib)
+       (intf (path findlib.mli))
+       (impl (path findlib.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Flow)
+      (visibility public)
+      (source (path Flow) (intf (path flow.mli)) (impl (path flow.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Flow_lexer)
+      (visibility public)
+      (source
+       (path Flow_lexer)
+       (intf (path flow_lexer.mli))
+       (impl (path flow_lexer.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Freevars)
+      (visibility public)
+      (source
+       (path Freevars)
+       (intf (path freevars.mli))
+       (impl (path freevars.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Fs)
+      (visibility public)
+      (source (path Fs) (intf (path fs.mli)) (impl (path fs.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Generate)
+      (visibility public)
+      (source
+       (path Generate)
+       (intf (path generate.mli))
+       (impl (path generate.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Generate_closure)
+      (visibility public)
+      (source
+       (path Generate_closure)
+       (intf (path generate_closure.mli))
+       (impl (path generate_closure.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Global_flow)
+      (visibility public)
+      (source
+       (path Global_flow)
+       (intf (path global_flow.mli))
+       (impl (path global_flow.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Inline)
+      (visibility public)
+      (source (path Inline) (intf (path inline.mli)) (impl (path inline.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Instr)
+      (visibility public)
+      (source (path Instr) (intf (path instr.mli)) (impl (path instr.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Javascript)
+      (visibility public)
+      (source
+       (path Javascript)
+       (intf (path javascript.mli))
+       (impl (path javascript.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Js_assign)
+      (visibility public)
+      (source
+       (path Js_assign)
+       (intf (path js_assign.mli))
+       (impl (path js_assign.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Js_output)
+      (visibility public)
+      (source
+       (path Js_output)
+       (intf (path js_output.mli))
+       (impl (path js_output.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Js_parser)
+      (visibility public)
+      (source
+       (path Js_parser)
+       (intf (path js_parser.mli))
+       (impl (path js_parser.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Js_simpl)
+      (visibility public)
+      (source
+       (path Js_simpl)
+       (intf (path js_simpl.mli))
+       (impl (path js_simpl.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Js_token)
+      (visibility public)
+      (source
+       (path Js_token)
+       (intf (path js_token.mli))
+       (impl (path js_token.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Js_traverse)
+      (visibility public)
+      (source
+       (path Js_traverse)
+       (intf (path js_traverse.mli))
+       (impl (path js_traverse.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Lambda_lifting)
+      (visibility public)
+      (source
+       (path Lambda_lifting)
+       (intf (path lambda_lifting.mli))
+       (impl (path lambda_lifting.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Link_js)
+      (visibility public)
+      (source
+       (path Link_js)
+       (intf (path link_js.mli))
+       (impl (path link_js.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Linker)
+      (visibility public)
+      (source (path Linker) (intf (path linker.mli)) (impl (path linker.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Macro)
+      (visibility public)
+      (source (path Macro) (intf (path macro.mli)) (impl (path macro.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Magic_number)
+      (visibility public)
+      (source
+       (path Magic_number)
+       (intf (path magic_number.mli))
+       (impl (path magic_number.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Mlvalue)
+      (visibility public)
+      (source
+       (path Mlvalue)
+       (intf (path mlvalue.mli))
+       (impl (path mlvalue.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Ocaml_compiler)
+      (visibility public)
+      (source
+       (path Ocaml_compiler)
+       (intf (path ocaml_compiler.mli))
+       (impl (path ocaml_compiler.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Ocaml_version)
+      (visibility public)
+      (source
+       (path Ocaml_version)
+       (intf (path ocaml_version.mli))
+       (impl (path ocaml_version.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Parse_bytecode)
+      (visibility public)
+      (source
+       (path Parse_bytecode)
+       (intf (path parse_bytecode.mli))
+       (impl (path parse_bytecode.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Parse_info)
+      (visibility public)
+      (source
+       (path Parse_info)
+       (intf (path parse_info.mli))
+       (impl (path parse_info.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Parse_js)
+      (visibility public)
+      (source
+       (path Parse_js)
+       (intf (path parse_js.mli))
+       (impl (path parse_js.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Partial_cps_analysis)
+      (visibility public)
+      (source
+       (path Partial_cps_analysis)
+       (intf (path partial_cps_analysis.mli))
+       (impl (path partial_cps_analysis.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Phisimpl)
+      (visibility public)
+      (source
+       (path Phisimpl)
+       (intf (path phisimpl.mli))
+       (impl (path phisimpl.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Pretty_print)
+      (visibility public)
+      (source
+       (path Pretty_print)
+       (intf (path pretty_print.mli))
+       (impl (path pretty_print.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Primitive)
+      (visibility public)
+      (source
+       (path Primitive)
+       (intf (path primitive.mli))
+       (impl (path primitive.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Pseudo_fs)
+      (visibility public)
+      (source
+       (path Pseudo_fs)
+       (intf (path pseudo_fs.mli))
+       (impl (path pseudo_fs.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Pure_fun)
+      (visibility public)
+      (source
+       (path Pure_fun)
+       (intf (path pure_fun.mli))
+       (impl (path pure_fun.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Reserved)
+      (visibility public)
+      (source
+       (path Reserved)
+       (intf (path reserved.mli))
+       (impl (path reserved.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Source_map)
+      (visibility public)
+      (source
+       (path Source_map)
+       (intf (path source_map.mli))
+       (impl (path source_map.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Source_map_io)
+      (visibility public)
+      (source
+       (path Source_map_io)
+       (intf (path source_map_io.mli))
+       (impl (path source_map_io.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Specialize)
+      (visibility public)
+      (source
+       (path Specialize)
+       (intf (path specialize.mli))
+       (impl (path specialize.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Specialize_js)
+      (visibility public)
+      (source
+       (path Specialize_js)
+       (intf (path specialize_js.mli))
+       (impl (path specialize_js.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Stdlib)
+      (visibility public)
+      (source (path Stdlib) (impl (path stdlib.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Strongly_connected_components)
+      (visibility public)
+      (source
+       (path Strongly_connected_components)
+       (intf (path strongly_connected_components.mli))
+       (impl (path strongly_connected_components.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Subst)
+      (visibility public)
+      (source (path Subst) (intf (path subst.mli)) (impl (path subst.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Tailcall)
+      (visibility public)
+      (source
+       (path Tailcall)
+       (intf (path tailcall.mli))
+       (impl (path tailcall.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Target_env)
+      (visibility public)
+      (source
+       (path Target_env)
+       (intf (path target_env.mli))
+       (impl (path target_env.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Timer)
+      (visibility public)
+      (source (path Timer) (intf (path timer.mli)) (impl (path timer.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Unit_info)
+      (visibility public)
+      (source
+       (path Unit_info)
+       (intf (path unit_info.mli))
+       (impl (path unit_info.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Var_printer)
+      (visibility public)
+      (source
+       (path Var_printer)
+       (intf (path var_printer.mli))
+       (impl (path var_printer.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler__Vlq64)
+      (visibility public)
+      (source (path Vlq64) (intf (path vlq64.mli)) (impl (path vlq64.ml))))))
+   (wrapped true))))
+(library
+ (name js_of_ocaml-compiler.dynlink)
+ (kind normal)
+ (synopsis "Js_of_ocaml compiler dynlink support")
+ (archives
+  (byte dynlink/js_of_ocaml_compiler_dynlink.cma)
+  (native dynlink/js_of_ocaml_compiler_dynlink.cmxa))
+ (plugins
+  (byte dynlink/js_of_ocaml_compiler_dynlink.cma)
+  (native dynlink/js_of_ocaml_compiler_dynlink.cmxs))
+ (native_archives dynlink/js_of_ocaml_compiler_dynlink.a)
+ (requires
+  js_of_ocaml-compiler
+  js_of_ocaml-compiler.runtime
+  compiler-libs.bytecomp)
+ (main_module_name Js_of_ocaml_compiler_dynlink)
+ (modes byte native)
+ (modules
+  (singleton
+   (obj_name js_of_ocaml_compiler_dynlink)
+   (visibility public)
+   (source
+    (path Js_of_ocaml_compiler_dynlink)
+    (intf (path dynlink/js_of_ocaml_compiler_dynlink.mli))
+    (impl (path dynlink/js_of_ocaml_compiler_dynlink.ml))))))
+(library
+ (name js_of_ocaml-compiler.findlib-support)
+ (kind normal)
+ (archives
+  (byte findlib-support/jsoo_findlib_support.cma)
+  (native findlib-support/jsoo_findlib_support.cmxa))
+ (plugins
+  (byte findlib-support/jsoo_findlib_support.cma)
+  (native findlib-support/jsoo_findlib_support.cmxs))
+ (native_archives findlib-support/jsoo_findlib_support.a)
+ (requires js_of_ocaml-compiler findlib)
+ (main_module_name Jsoo_findlib_support)
+ (modes byte native)
+ (modules
+  (singleton
+   (obj_name jsoo_findlib_support)
+   (visibility public)
+   (source
+    (path Jsoo_findlib_support)
+    (intf (path findlib-support/jsoo_findlib_support.mli))
+    (impl (path findlib-support/jsoo_findlib_support.ml))))))
+(library
+ (name js_of_ocaml-compiler.runtime)
+ (kind normal)
+ (archives (byte runtime/jsoo_runtime.cma) (native runtime/jsoo_runtime.cmxa))
+ (plugins (byte runtime/jsoo_runtime.cma) (native runtime/jsoo_runtime.cmxs))
+ (foreign_objects runtime/js_of_ocaml_runtime_stubs.o)
+ (foreign_archives
+  (archives (for all) (files runtime/libjsoo_runtime_stubs.a)))
+ (foreign_dll_files ../stublibs/dlljsoo_runtime_stubs.so)
+ (native_archives runtime/jsoo_runtime.a)
+ (main_module_name Jsoo_runtime)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name jsoo_runtime__)
+     (visibility public)
+     (kind alias)
+     (source
+      (path Jsoo_runtime__)
+      (impl (path runtime/jsoo_runtime__.ml-gen))))
+    (name Jsoo_runtime)
+    (modules
+     (module
+      (obj_name jsoo_runtime)
+      (visibility public)
+      (source (path Jsoo_runtime) (impl (path runtime/jsoo_runtime.ml))))
+     (module
+      (obj_name jsoo_runtime__Runtime_version)
+      (visibility public)
+      (source (path Runtime_version) (impl (path runtime/runtime_version.ml))))))
+   (wrapped true))))
+(library
+ (name js_of_ocaml-compiler.runtime-files)
+ (kind normal)
+ (archives
+  (byte runtime-files/js_of_ocaml_compiler_runtime_files.cma)
+  (native runtime-files/js_of_ocaml_compiler_runtime_files.cmxa))
+ (plugins
+  (byte runtime-files/js_of_ocaml_compiler_runtime_files.cma)
+  (native runtime-files/js_of_ocaml_compiler_runtime_files.cmxs))
+ (native_archives runtime-files/js_of_ocaml_compiler_runtime_files.a)
+ (requires js_of_ocaml-compiler)
+ (main_module_name Js_of_ocaml_compiler_runtime_files)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name js_of_ocaml_compiler_runtime_files__)
+     (visibility public)
+     (kind alias)
+     (source
+      (path Js_of_ocaml_compiler_runtime_files__)
+      (impl (path runtime-files/js_of_ocaml_compiler_runtime_files__.ml-gen))))
+    (name Js_of_ocaml_compiler_runtime_files)
+    (modules
+     (module
+      (obj_name js_of_ocaml_compiler_runtime_files__Files)
+      (visibility public)
+      (source (path Files) (impl (path runtime-files/files.ml))))
+     (module
+      (obj_name js_of_ocaml_compiler_runtime_files)
+      (visibility public)
+      (source
+       (path Js_of_ocaml_compiler_runtime_files)
+       (impl (path runtime-files/js_of_ocaml_compiler_runtime_files.ml))))))
+   (wrapped true))))

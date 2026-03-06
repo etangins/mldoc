@@ -1,0 +1,35 @@
+version = "3.7"
+description = ""
+requires = "gen"
+archive(byte) = "sedlex.cma"
+archive(native) = "sedlex.cmxa"
+plugin(byte) = "sedlex.cma"
+plugin(native) = "sedlex.cmxs"
+package "ppx" (
+  directory = "ppx"
+  version = "3.7"
+  description = ""
+  requires(ppx_driver) = "ppxlib ppxlib.ast sedlex sedlex.utils"
+  archive(ppx_driver,byte) = "sedlex_ppx.cma"
+  archive(ppx_driver,native) = "sedlex_ppx.cmxa"
+  plugin(ppx_driver,byte) = "sedlex_ppx.cma"
+  plugin(ppx_driver,native) = "sedlex_ppx.cmxs"
+  # This is what dune uses to find out the runtime dependencies of
+  # a preprocessor
+  ppx_runtime_deps = "sedlex"
+  # This line makes things transparent for people mixing preprocessors
+  # and normal dependencies
+  requires(-ppx_driver) = "sedlex"
+  ppx(-ppx_driver,-custom_ppx) = "./ppx.exe --as-ppx"
+  library_kind = "ppx_rewriter"
+)
+package "utils" (
+  directory = "utils"
+  version = "3.7"
+  description = ""
+  requires = ""
+  archive(byte) = "sedlex_utils.cma"
+  archive(native) = "sedlex_utils.cmxa"
+  plugin(byte) = "sedlex_utils.cma"
+  plugin(native) = "sedlex_utils.cmxs"
+)

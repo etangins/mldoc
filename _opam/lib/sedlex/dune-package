@@ -1,0 +1,179 @@
+(lang dune 3.15)
+(name sedlex)
+(version 3.7)
+(sections (lib .) (libexec .) (doc ../../doc/sedlex))
+(files
+ (lib
+  (META
+   dune-package
+   opam
+   ppx/iso.ml
+   ppx/iso.mli
+   ppx/ppx_sedlex.ml
+   ppx/sedlex.ml
+   ppx/sedlex.mli
+   ppx/sedlex_cset.ml
+   ppx/sedlex_ppx.a
+   ppx/sedlex_ppx.cma
+   ppx/sedlex_ppx.cmi
+   ppx/sedlex_ppx.cmt
+   ppx/sedlex_ppx.cmx
+   ppx/sedlex_ppx.cmxa
+   ppx/sedlex_ppx.ml
+   ppx/sedlex_ppx__Iso.cmi
+   ppx/sedlex_ppx__Iso.cmt
+   ppx/sedlex_ppx__Iso.cmti
+   ppx/sedlex_ppx__Iso.cmx
+   ppx/sedlex_ppx__Ppx_sedlex.cmi
+   ppx/sedlex_ppx__Ppx_sedlex.cmt
+   ppx/sedlex_ppx__Ppx_sedlex.cmx
+   ppx/sedlex_ppx__Sedlex.cmi
+   ppx/sedlex_ppx__Sedlex.cmt
+   ppx/sedlex_ppx__Sedlex.cmti
+   ppx/sedlex_ppx__Sedlex.cmx
+   ppx/sedlex_ppx__Sedlex_cset.cmi
+   ppx/sedlex_ppx__Sedlex_cset.cmt
+   ppx/sedlex_ppx__Sedlex_cset.cmx
+   ppx/sedlex_ppx__Unicode.cmi
+   ppx/sedlex_ppx__Unicode.cmt
+   ppx/sedlex_ppx__Unicode.cmti
+   ppx/sedlex_ppx__Unicode.cmx
+   ppx/sedlex_ppx__Utf8.cmi
+   ppx/sedlex_ppx__Utf8.cmt
+   ppx/sedlex_ppx__Utf8.cmti
+   ppx/sedlex_ppx__Utf8.cmx
+   ppx/sedlex_ppx__Xml.cmi
+   ppx/sedlex_ppx__Xml.cmt
+   ppx/sedlex_ppx__Xml.cmti
+   ppx/sedlex_ppx__Xml.cmx
+   ppx/unicode.ml
+   ppx/unicode.mli
+   ppx/utf8.ml
+   ppx/utf8.mli
+   ppx/xml.ml
+   ppx/xml.mli
+   sedlex.a
+   sedlex.cma
+   sedlex.cmxa
+   sedlexing.cmi
+   sedlexing.cmt
+   sedlexing.cmti
+   sedlexing.cmx
+   sedlexing.ml
+   sedlexing.mli
+   utils/cset.ml
+   utils/cset.mli
+   utils/sedlex_utils.a
+   utils/sedlex_utils.cma
+   utils/sedlex_utils.cmi
+   utils/sedlex_utils.cmt
+   utils/sedlex_utils.cmx
+   utils/sedlex_utils.cmxa
+   utils/sedlex_utils.ml
+   utils/sedlex_utils__Cset.cmi
+   utils/sedlex_utils__Cset.cmt
+   utils/sedlex_utils__Cset.cmti
+   utils/sedlex_utils__Cset.cmx))
+ (libexec
+  (ppx/ppx.exe ppx/sedlex_ppx.cmxs sedlex.cmxs utils/sedlex_utils.cmxs))
+ (doc (CHANGES.md LICENSE README.md)))
+(library
+ (name sedlex)
+ (kind normal)
+ (archives (byte sedlex.cma) (native sedlex.cmxa))
+ (plugins (byte sedlex.cma) (native sedlex.cmxs))
+ (native_archives sedlex.a)
+ (requires gen)
+ (modes byte native)
+ (modules
+  (singleton
+   (obj_name sedlexing)
+   (visibility public)
+   (source
+    (path Sedlexing)
+    (intf (path sedlexing.mli))
+    (impl (path sedlexing.ml))))))
+(library
+ (name sedlex.ppx)
+ (kind ppx_rewriter)
+ (archives (byte ppx/sedlex_ppx.cma) (native ppx/sedlex_ppx.cmxa))
+ (plugins (byte ppx/sedlex_ppx.cma) (native ppx/sedlex_ppx.cmxs))
+ (native_archives ppx/sedlex_ppx.a)
+ (requires ppxlib.ast ppxlib sedlex sedlex.utils)
+ (ppx_runtime_deps sedlex)
+ (main_module_name Sedlex_ppx)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name sedlex_ppx)
+     (visibility public)
+     (kind alias)
+     (source (path Sedlex_ppx) (impl (path ppx/sedlex_ppx.ml-gen))))
+    (name Sedlex_ppx)
+    (modules
+     (module
+      (obj_name sedlex_ppx__Iso)
+      (visibility public)
+      (source (path Iso) (intf (path ppx/iso.mli)) (impl (path ppx/iso.ml))))
+     (module
+      (obj_name sedlex_ppx__Ppx_sedlex)
+      (visibility public)
+      (source (path Ppx_sedlex) (impl (path ppx/ppx_sedlex.ml))))
+     (module
+      (obj_name sedlex_ppx__Sedlex)
+      (visibility public)
+      (source
+       (path Sedlex)
+       (intf (path ppx/sedlex.mli))
+       (impl (path ppx/sedlex.ml))))
+     (module
+      (obj_name sedlex_ppx__Sedlex_cset)
+      (visibility public)
+      (source (path Sedlex_cset) (impl (path ppx/sedlex_cset.ml))))
+     (module
+      (obj_name sedlex_ppx__Unicode)
+      (visibility public)
+      (source
+       (path Unicode)
+       (intf (path ppx/unicode.mli))
+       (impl (path ppx/unicode.ml))))
+     (module
+      (obj_name sedlex_ppx__Utf8)
+      (visibility public)
+      (source
+       (path Utf8)
+       (intf (path ppx/utf8.mli))
+       (impl (path ppx/utf8.ml))))
+     (module
+      (obj_name sedlex_ppx__Xml)
+      (visibility public)
+      (source (path Xml) (intf (path ppx/xml.mli)) (impl (path ppx/xml.ml))))))
+   (wrapped true))))
+(library
+ (name sedlex.utils)
+ (kind normal)
+ (archives (byte utils/sedlex_utils.cma) (native utils/sedlex_utils.cmxa))
+ (plugins (byte utils/sedlex_utils.cma) (native utils/sedlex_utils.cmxs))
+ (native_archives utils/sedlex_utils.a)
+ (main_module_name Sedlex_utils)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name sedlex_utils)
+     (visibility public)
+     (kind alias)
+     (source (path Sedlex_utils) (impl (path utils/sedlex_utils.ml-gen))))
+    (name Sedlex_utils)
+    (modules
+     (module
+      (obj_name sedlex_utils__Cset)
+      (visibility public)
+      (source
+       (path Cset)
+       (intf (path utils/cset.mli))
+       (impl (path utils/cset.ml))))))
+   (wrapped true))))
