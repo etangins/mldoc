@@ -1,14 +1,3 @@
+_opam/
 _build/
-setup.data
-setup.log
-setup.bin
-*.native
-*.byte
-TAGS
-tmp
-_tags
-*.merlin
 *.install
-/dune-workspace
-examples/syntax.html
-js/package/index.js
